@@ -1,0 +1,21 @@
+<!--电影图和类型  -->
+<view class='head'>
+  <!--上  -->
+  <view class='headTop'>
+    <view>图片</view>
+    <!--右  -->
+    <view>
+      <view>电影名</view>
+      <view>英文</view>
+      <view>评分</view>
+      <view>类型</view>
+      <view>地区</view>
+      <view>上映时间</view>
+    </view>
+  </view>
+  <!--下  -->
+  <view class='headbottom'>
+    <button>想看</button>
+    <button>评分</button>
+  </view>
+</view>

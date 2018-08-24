@@ -1,0 +1,93 @@
+<!----------------------------------- 标题栏 ----------------------------------->
+<view class='navigation'>
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>地区</view>
+  <view class='showing'>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>热点</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>待映</view>
+  </view>
+  <view class='tab  {{currentData == 3 ? "tabBorer" : ""}}' data-current="3" bindtap='checkCurrent'>
+    <icon class="searchcion" size='20' type='search'>
+    </icon>
+  </view>
+</view>
+
+<!----------------------------------- 内容 ----------------------------------->
+<swiper current="{{currentData}}" class='swiper' style="height:1500px;" duration="300" bindchange="bindchange">
+  <!-----------------------------定位 ----------------------------->
+  <swiper-item>
+    <view class='swiper_con'>地区</view>
+  </swiper-item>
+
+  <!-----------------------------热映 ----------------------------->
+  <swiper-item>
+    <!--数据栏  -->
+    <view wx:for="{{list}}" wx:key="item._id" class='show' bindtap='particulars'>
+      <view class='movieLeft'>
+        <!--电影图  -->
+        <view>
+          <!-- <image src='{{IP+"/movie/"+ item.movie_middle }}' class='movie_photo'></image> -->
+          <image src="{{arry[index] ? imgUrls[index].url: 'index.png'}}"></image>
+        </view>
+
+        <!--电影名等等  -->
+        <view class='content'>
+          <view>
+            <text class='name'>{{item.movie_name}}</text>
+          </view>
+          <view>
+            <text class='type'>{{item.movie_type}}</text>
+          </view>
+          <view>
+            <text class='actor'>{{item.movie_actor}}</text>
+          </view>
+          <view>
+            <text class='actor'>{{item.movie_time}}</text>
+          </view>
+        </view>
+      </view>
+      <!--购票预售  -->
+      <view>
+        <view class='score'>
+          <text>{{item.movie_user_score}}</text>
+        </view>
+        <button class='ticket' wx:if='{{item.isActive}}'>购票</button>
+        <button class='presell' wx:else>预售</button>
+      </view>
+    </view>
+  </swiper-item>
+
+  <!-----------------------------待映 ----------------------------->
+  <swiper-item>
+    <view>
+      <view class='recent'>近期最受欢迎</view>
+      <view class='greet'>
+
+      </view>
+
+      <view class='presellTime'>
+        <view>时间</view>
+        <view wx:for="{{list}}" wx:key="item._id" class='presellMovie' bindtap='particulars'>
+          <view class='movieLeft'>
+            <view>
+              <image src='{{IP+"/movie/"+ item.movie_middle }}' class='movie_photo'></image>
+            </view>
+            <view class='content'>
+              <view class='name'>{{item.movie_name}}</view>
+              <view class='type'>{{item.movie_type}}</view>
+              <view class='actor'>{{item.movie_actor}}</view>
+              <view class='actor'>{{item.movie_time}}</view>
+            </view>
+          </view>
+
+          <view>
+            <text class='want'>{{item.movie_want}}</text>
+            <button class='presell'>预售</button>
+          </view>
+
+        </view>
+      </view>
+
+
+    </view>
+  </swiper-item>
+</swiper>

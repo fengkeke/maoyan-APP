@@ -1,0 +1,125 @@
+/*-----------------------------------------标题栏-----------------------------------------*/
+
+.tab {
+  float: left;
+  text-align: center;
+  padding: 20rpx 20rpx;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabBorer {
+  border-bottom: 1px solid #f00;
+  color: #f00;
+}
+
+.searchcion {
+  padding-left: 20rpx;
+  border-left: 0.5rpx solid gray;
+}
+
+.showing>view:nth-child(1) {
+  margin-right: 100rpx;
+}
+
+/*-----------------------------------------热映显示数据-----------------------------------------*/
+
+.movieLeft {
+  display: flex;
+}
+
+.show {
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx 20rpx;
+  border-bottom: 0.5rpx solid rgb(175, 174, 174);
+}
+
+/*电影图片  */
+
+.movie_photo {
+  width: 150rpx;
+  height: 200rpx;
+}
+
+/*电影  */
+
+.content {
+  margin-left: 20rpx;
+}
+
+.name {
+  font-size: 35rpx;
+}
+
+.type {
+  font-size: 20rpx;
+  color: gray;
+}
+
+.actor {
+  font-size: 20rpx;
+  color: rgb(175, 174, 174);
+}
+
+/*购票预售  */
+
+.score {
+  color: yellow;
+  padding-left: 80rpx;
+}
+
+.ticket {
+  width: 150rpx;
+  height: 100rpx;
+  color: white;
+  background-color: red;
+  padding-right: 0rpx;
+}
+
+.presell {
+  width: 150rpx;
+  height: 100rpx;
+  color: white;
+  background-color: rgb(65, 136, 243);
+  padding-right: 0rpx;
+}
+
+/*----------------------------------------- 待映 -----------------------------------------*/
+
+.recent {
+  padding: 20rpx 0 20rpx 20rpx;
+  font-size: 30rpx;
+}
+
+/*近期最受欢迎  */
+
+.greet {
+  height: 400rpx;
+  background-color: pink;
+  margin-bottom: 30rpx;
+}
+
+/*预售电影*/
+
+.presellTime {
+  padding: 0 20rpx;
+}
+
+.presellTime>view:nth-child(1) {
+  padding: 20rpx 0;
+  font-size: 30rpx;
+}
+
+.presellMovie {
+  display: flex;
+  justify-content: space-between;
+}
+
+.want {
+  color: yellow;
+}

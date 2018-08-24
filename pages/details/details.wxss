@@ -1,0 +1,16 @@
+/*头部  */
+.head{
+  height: 400rpx;
+  background-color: rgb(175, 60, 60);
+  padding-left: 20rpx;
+}
+.headTop{
+  display: flex;  
+}
+.headbottom{
+  display: flex;
+}
+.headbottom>button{
+  width: 45%;
+  height: 20%;
+}
